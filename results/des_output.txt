@@ -1,0 +1,164 @@
+Bang IP (4 hang dau la L0, 4 hang sau la R0):
+b57 b49 b41 b33 b25 b17 b9  b1  
+b59 b51 b43 b35 b27 b19 b11 b3  
+b61 b53 b45 b37 b29 b21 b13 b5  
+b63 b55 b47 b39 b31 b23 b15 b7  
+b56 b48 b40 b32 b24 b16 b8  b0  
+b58 b50 b42 b34 b26 b18 b10 b2  
+b60 b52 b44 b36 b28 b20 b12 b4  
+b62 b54 b46 b38 b30 b22 b14 b6  
+
+Bang mo rong E(R0):
+b6  b56 b48 b40 b32 b24 
+b32 b24 b16 b8  b0  b58 
+b0  b58 b50 b42 b34 b26 
+b34 b26 b18 b10 b2  b60 
+b2  b60 b52 b44 b36 b28 
+b36 b28 b20 b12 b4  b62 
+b4  b62 b54 b46 b38 b30 
+b38 b30 b22 b14 b6  b56 
+
+Bang hoan vi P(b0..b31):
+b15 b6  b19 b20 b28 b11 b27 b16 
+b0  b14 b22 b25 b4  b17 b30 b9  
+b1  b7  b23 b13 b31 b26 b2  b8  
+b18 b12 b29 b5  b21 b10 b3  b24 
+
+Plaintext : 0123456789ABCDEF
+Key       : 133457799BBCDFF1
+
+Sinh khoa con:
+C0 = F0CCAAF, D0 = 556678F
+Vong  1: C = E19955F | D = AACCF1E | K1  = 1B02EFFC7072
+Vong  2: C = C332ABF | D = 5599E3D | K2  = 79AED9DBC9E5
+Vong  3: C = 0CCAAFF | D = 56678F5 | K3  = 55FC8A42CF99
+Vong  4: C = 332ABFC | D = 599E3D5 | K4  = 72ADD6DB351D
+Vong  5: C = CCAAFF0 | D = 6678F55 | K5  = 7CEC07EB53A8
+Vong  6: C = 32ABFC3 | D = 99E3D55 | K6  = 63A53E507B2F
+Vong  7: C = CAAFF0C | D = 678F556 | K7  = EC84B7F618BC
+Vong  8: C = 2ABFC33 | D = 9E3D559 | K8  = F78A3AC13BFB
+Vong  9: C = 557F866 | D = 3C7AAB3 | K9  = E0DBEBEDE781
+Vong 10: C = 55FE199 | D = F1EAACC | K10 = B1F347BA464F
+Vong 11: C = 57F8665 | D = C7AAB33 | K11 = 215FD3DED386
+Vong 12: C = 5FE1995 | D = 1EAACCF | K12 = 7571F59467E9
+Vong 13: C = 7F86655 | D = 7AAB33C | K13 = 97C5D1FABA41
+Vong 14: C = FE19955 | D = EAACCF1 | K14 = 5F43B7F2E73A
+Vong 15: C = F866557 | D = AAB33C7 | K15 = BF918D3D3F0A
+Vong 16: C = F0CCAAF | D = 556678F | K16 = CB3D8B0E17F5
+
+Sau IP: CC00CCFFF0AAF0AA (L0 = CC00CCFF, R0 = F0AAF0AA)
+
+Vong 1:
+  E(R)      = 7A15557A1555
+  E XOR K   = 6117BA866527
+  Sau S-box = 5C82B597
+  f = P(S)  = 234AA9BB
+  L1 = F0AAF0AA, R1 = EF4A6544
+
+Vong 2:
+  E(R)      = 75EA5430AA09
+  E XOR K   = 0C448DEB63EC
+  Sau S-box = F8D03AAE
+  f = P(S)  = 3CAB87A3
+  L2 = EF4A6544, R2 = CC017709
+
+Vong 3:
+  E(R)      = E58002BAE853
+  E XOR K   = B07C88F827CA
+  Sau S-box = 2710E16F
+  f = P(S)  = 4D166EB0
+  L3 = CC017709, R3 = A25C0BF4
+
+Vong 4:
+  E(R)      = 5042F8057FA9
+  E XOR K   = 22EF2EDE4AB4
+  Sau S-box = 21ED9F3A
+  f = P(S)  = BB23774C
+  L4 = A25C0BF4, R4 = 77220045
+
+Vong 5:
+  E(R)      = BAE90400020A
+  E XOR K   = C60503EB51A2
+  Sau S-box = 50C831EB
+  f = P(S)  = 2813ADC3
+  L5 = 77220045, R5 = 8A4FA637
+
+Vong 6:
+  E(R)      = C5425FD0C1AF
+  E XOR K   = A6E76180BA80
+  Sau S-box = 41F34C3D
+  f = P(S)  = 9E45CD2C
+  L6 = 8A4FA637, R6 = E967CD69
+
+Vong 7:
+  E(R)      = F52B0FE5AB53
+  E XOR K   = 19AFB813B3EF
+  Sau S-box = 107540AD
+  f = P(S)  = 8C051C27
+  L7 = E967CD69, R7 = 064ABA10
+
+Vong 8:
+  E(R)      = 00C2555F40A0
+  E XOR K   = F7486F9E7B5B
+  Sau S-box = 6C187CAE
+  f = P(S)  = 3C0E86F9
+  L8 = 064ABA10, R8 = D5694B90
+
+Vong 9:
+  E(R)      = 6AAB52A57CA1
+  E XOR K   = 8A70B9489B20
+  Sau S-box = 110C5777
+  f = P(S)  = 22367C6A
+  L9 = D5694B90, R9 = 247CC67A
+
+Vong 10:
+  E(R)      = 1083F960C3F4
+  E XOR K   = A170BEDA85BB
+  Sau S-box = DA045275
+  f = P(S)  = 62BC9C22
+  L10 = 247CC67A, R10 = B7D5D7B2
+
+Vong 11:
+  E(R)      = 5AFEABEAFDA5
+  E XOR K   = 7BA178342E23
+  Sau S-box = 7305D101
+  f = P(S)  = E104FA02
+  L11 = B7D5D7B2, R11 = C5783C78
+
+Vong 12:
+  E(R)      = 60ABF01F83F1
+  E XOR K   = 15DA058BE418
+  Sau S-box = 7B8B2635
+  f = P(S)  = C268CFEA
+  L12 = C5783C78, R12 = 75BD1858
+
+Vong 13:
+  E(R)      = 3ABDFA8F02F0
+  E XOR K   = AD782B75B8B1
+  Sau S-box = 9AD18B4F
+  f = P(S)  = DDBB2922
+  L13 = 75BD1858, R13 = 18C3155A
+
+Vong 14:
+  E(R)      = 0F16068AAAF4
+  E XOR K   = 5055B1784DCE
+  Sau S-box = 64799AF1
+  f = P(S)  = B7318E55
+  L14 = 18C3155A, R14 = C28C960D
+
+Vong 15:
+  E(R)      = E054594AC05B
+  E XOR K   = 5FC5D477FF51
+  Sau S-box = B2E88D3C
+  f = P(S)  = 5B81276E
+  L15 = C28C960D, R15 = 43423234
+
+Vong 16:
+  E(R)      = 206A041A41A8
+  E XOR K   = EB578F14565D
+  Sau S-box = A7832429
+  f = P(S)  = C8C04F98
+  L16 = 43423234, R16 = 0A4CD995
+
+Sau doi cho (R16||L16): 0A4CD99543423234
+Ciphertext            : 85E813540F0AB405
